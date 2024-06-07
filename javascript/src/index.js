@@ -23,3 +23,48 @@ const getLanguage = (code) => {
  module.exports = {
     getLanguage
  };
+
+
+
+ function returnBoolean (number) {
+    let response;
+   return (number===1) ? response = true : response = false;
+    
+ };
+
+
+ const returnNumber = () => {
+  
+    let truthValue = returnBoolean(1);
+
+    console.log(truthValue);
+ };
+
+
+ returnNumber();
+
+
+
+//two sum
+
+
+const findTwoSum = (numbers) => {
+    const target = 9;
+    const solution = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+        for(let  j = i + 1; j < numbers.length; j++) {
+            if( numbers[j] + numbers[i] === target) {
+                solution.push([numbers[j], numbers[i]]);
+            }
+        }
+    };
+
+    return solution;
+};
+
+
+console.log(findTwoSum([1,2, 3, 4, 5, 8]));
+
+
+
